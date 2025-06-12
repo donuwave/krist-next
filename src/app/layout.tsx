@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { ReactNode } from 'react';
 
-import { Home } from '@/pages/home/Home';
+import { Header } from '@/widgets/header';
 
 import './globals.css';
 
@@ -20,16 +21,15 @@ export const metadata: Metadata = {
   description: 'Krist Ecommerce',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+type RootLayoutProps = Readonly<{
+  children: ReactNode;
+}>;
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        надстройка
-        <Home />
+        <Header />
         {children}
       </body>
     </html>
