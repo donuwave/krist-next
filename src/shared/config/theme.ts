@@ -6,7 +6,9 @@ const baseOptions = {
   },
   shape: {
     borderRadius: 8,
-    textTransform: 'capitalize',
+    button: {
+      textTransform: 'capitalize',
+    },
   },
   spacing: 4,
 };
@@ -21,7 +23,7 @@ let lightTheme = createTheme({
       dark: '#423e4c',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#A4A1AA',
     },
     background: {
       default: '#FFFFFF',

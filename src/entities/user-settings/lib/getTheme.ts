@@ -1,4 +1,4 @@
-import { darkTheme, lightTheme } from '@/entities/user-settings';
+import { darkTheme, lightTheme } from '@/shared/config';
 
 import { ThemeVariants } from '../model/user-settings.store.types';
 

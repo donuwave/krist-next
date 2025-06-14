@@ -4,15 +4,15 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Button, IconButton } from '@mui/material';
-import Image from 'next/image';
 import React from 'react';
 
 import { Navbar } from '@/features/navbar';
+import { Logo } from '@/shared/components';
 
 export const Header = () => {
   return (
     <header className="flex justify-between items-center h-20 max-w-400 mx-auto">
-      <Image src="/logo.png" alt="logo" width={100} height={30} />
+      <Logo />
       <Navbar />
       <div className="flex gap-10">
         <div className="flex gap-2">

@@ -1,3 +1,5 @@
+import { Login } from '@/screens/login';
+
 export default function Page() {
-  return <div>login</div>;
+  return <Login />;
 }
