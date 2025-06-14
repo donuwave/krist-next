@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 
-import { Header } from '@/widgets/header';
+import { Providers } from './(providers)';
 
 import './globals.css';
 
@@ -27,10 +27,9 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html data-toolpad-color-scheme="light" lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Header />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
