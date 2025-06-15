@@ -3,6 +3,7 @@ export interface Routes {
   registration: string;
   home: string;
   productList: string;
+  forgotPassword: string;
 }
 
 export const routes: Routes = {
@@ -10,4 +11,5 @@ export const routes: Routes = {
   registration: '/registration',
   home: '',
   productList: '/product-list',
+  forgotPassword: '/forgot-password',
 };

@@ -4,9 +4,9 @@ import { SignInForm } from '../model/sign-in.types';
 
 export const schema = object<SignInForm>()
   .shape({
-    email: string().required('Email обязателен').email('Неверный формат email'),
+    email: string().required('Email is required').email('Invalid email format'),
     password: string()
-      .required('Пароль обязателен')
-      .min(6, 'Пароль должен быть не менее 6 символов'),
+      .required('Password is required')
+      .min(6, 'The password must be at least 6 characters long.'),
   })
   .required();

@@ -26,6 +26,10 @@ export const SignIn = () => {
     router.push(routes.registration);
   };
 
+  const handleForgotPassword = () => {
+    router.push(routes.forgotPassword);
+  };
+
   const handleSubmitForm: SubmitHandler<SignInForm> = (d) => {
     // Запрос
     console.log(d);
@@ -64,10 +68,8 @@ export const SignIn = () => {
           <div className="flex items-center justify-between">
             <FormControlLabel control={<Checkbox />} label="Remember Me" />
             <Button
+              onClick={handleForgotPassword}
               sx={{
-                justifyContent: 'start',
-                marginTop: '5px',
-                width: 'max-content',
                 textTransform: 'capitalize',
               }}
               variant="text"
