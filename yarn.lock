@@ -752,7 +752,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/material@npm:^7.1.1":
+"@mui/material@npm:^7.0.2, @mui/material@npm:^7.1.1":
   version: 7.1.1
   resolution: "@mui/material@npm:7.1.1"
   dependencies:
@@ -1434,7 +1434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19":
+"@types/react@npm:^19, @types/react@npm:^19.1.1":
   version: 19.1.8
   resolution: "@types/react@npm:19.1.8"
   dependencies:
@@ -3687,6 +3687,7 @@ __metadata:
     eslint-import-resolver-typescript: "npm:^4.4.3"
     eslint-plugin-import: "npm:^2.31.0"
     eslint-plugin-prettier: "npm:^5.4.1"
+    mui-one-time-password-input: "npm:^5.0.0"
     next: "npm:15.3.3"
     prettier: "npm:^3.5.3"
     react: "npm:^19.0.0"
@@ -3970,6 +3971,30 @@ __metadata:
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: 10c0/d924b57e7312b3b63ad21fc5b3dc0af5e78d61a1fc7cfb5457edaf26326bf62be5307cc87ffb6862ef1c2b33b0233cdb5d4f01c4c958cc0d660948b65a287a48
+  languageName: node
+  linkType: hard
+
+"mui-one-time-password-input@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "mui-one-time-password-input@npm:5.0.0"
+  dependencies:
+    "@emotion/react": "npm:^11.14.0"
+    "@emotion/styled": "npm:^11.14.0"
+    "@mui/material": "npm:^7.0.2"
+    "@types/react": "npm:^19.1.1"
+    react: "npm:^19.1.0"
+    react-dom: "npm:^19.1.0"
+  peerDependencies:
+    "@emotion/react": ^11.13.0
+    "@emotion/styled": ^11.13.0
+    "@mui/material": ^7.0.0
+    "@types/react": ^18.0.0 || ^19.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/1d2f28cb489a5c2c278dc681819a0afa1d6fc9ae4a6989c37422cdd0162faeb69f3969e89ffccce7fd34f07ae73548c4644e28df9dceea9b6f8e1919777962c1
   languageName: node
   linkType: hard
 
@@ -4381,7 +4406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.0.0":
+"react-dom@npm:^19.0.0, react-dom@npm:^19.1.0":
   version: 19.1.0
   resolution: "react-dom@npm:19.1.0"
   dependencies:
@@ -4430,7 +4455,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0":
+"react@npm:^19.0.0, react@npm:^19.1.0":
   version: 19.1.0
   resolution: "react@npm:19.1.0"
   checksum: 10c0/530fb9a62237d54137a13d2cfb67a7db6a2156faed43eecc423f4713d9b20c6f2728b026b45e28fcd72e8eadb9e9ed4b089e99f5e295d2f0ad3134251bdd3698

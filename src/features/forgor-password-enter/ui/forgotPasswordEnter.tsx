@@ -1,10 +1,9 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { Button, Typography } from '@mui/material';
+import { Box, Button, FormHelperText, Typography } from '@mui/material';
+import { MuiOtpInput } from 'mui-one-time-password-input';
 import React, { FC } from 'react';
-import { useForm } from 'react-hook-form';
-
-import { Input } from '@/shared/ui';
+import { Controller, useForm } from 'react-hook-form';
 
 import { schema } from '../lib/forgot-password-enter';
 import {
@@ -14,11 +13,7 @@ import {
 
 //TODO: изменить название фичи
 export const ForgotPasswordEnter: FC<ForgotPasswordEnterProps> = ({ onSubmit, onBack }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ForgotPasswordEnterForm>({
+  const { control, handleSubmit } = useForm<ForgotPasswordEnterForm>({
     resolver: yupResolver(schema),
   });
 
@@ -42,13 +37,15 @@ export const ForgotPasswordEnter: FC<ForgotPasswordEnterProps> = ({ onSubmit, on
           We have share a code of your registered email address robertfox@example.com
         </Typography>
       </div>
-      <Input
-        inputLabel="Otp"
-        placeholder="Input otp"
-        variant="outlined"
-        error={!!errors.otp}
-        helperText={errors.otp?.message}
-        {...register('otp')}
+      <Controller
+        name="otp"
+        control={control}
+        render={({ field, fieldState: { error } }) => (
+          <Box>
+            <MuiOtpInput {...field} length={6} sx={{ gap: 1 }} />
+            {error && <FormHelperText error>{error.message}</FormHelperText>}
+          </Box>
+        )}
       />
       <Button
         type="submit"
