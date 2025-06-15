@@ -10,7 +10,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <Header />
-      {children}
+      <div className="flex max-w-400 mx-auto">{children}</div>
     </>
   );
 }

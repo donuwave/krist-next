@@ -36,6 +36,7 @@ export const PasswordChanged: FC<PasswordChangedProps> = ({ onSuccess }) => {
         </Typography>
 
         <Button
+          onClick={onSuccess}
           type="submit"
           sx={{
             '&.MuiButtonBase-root': {
