@@ -9,7 +9,7 @@ export const ForgotPassword = () => {
       <div className="absolute top-15 left-15 scale-125">
         <Logo />
       </div>
-      <div className="bg-[url(/login.png)] bg-top bg-no-repeat bg-cover w-full h-full" />
+      <div className="bg-[url(/forgot-password.png)] bg-bottom bg-no-repeat bg-cover w-full h-full" />
       <ForgotPasswordForm />
     </div>
   );
