@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center h-20 max-w-400 mx-auto">
+    <header className="flex justify-between items-center min-h-20 max-w-400 mx-auto w-[100%]">
       <Logo />
       <Navbar />
       <div className="flex gap-10">

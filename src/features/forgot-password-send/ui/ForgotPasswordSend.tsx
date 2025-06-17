@@ -22,9 +22,7 @@ export const ForgotPasswordSend: FC<ForgotPasswordProps> = ({ onSubmit }) => {
     resolver: yupResolver(schema),
   });
 
-  const handleBack = () => {
-    router.back();
-  };
+  const handleBack = () => router.back();
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-start gap-8 w-[70%]">
