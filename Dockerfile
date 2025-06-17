@@ -1,6 +1,7 @@
 FROM node:18-alpine AS deps
 WORKDIR /app
 
+# включаем corepack и активируем нужную версию Yarn
 RUN corepack enable \
  && corepack prepare yarn@4.9.2 --activate
 
