@@ -1,7 +1,15 @@
 import React, { FC, PropsWithChildren } from 'react';
 
-import { MuiProvider } from './MuiProvider';
+import { AntdDesignProvider } from './AntdDesignProvider';
+import { StyledComponentsRegistry } from './StyledComponentsProvider';
+import { ThemeConfigProvider } from './ThemeConfigProvider';
 
 export const Providers: FC<PropsWithChildren> = ({ children }) => {
-  return <MuiProvider>{children}</MuiProvider>;
+  return (
+    <StyledComponentsRegistry>
+      <AntdDesignProvider>
+        <ThemeConfigProvider>{children}</ThemeConfigProvider>
+      </AntdDesignProvider>
+    </StyledComponentsRegistry>
+  );
 };
