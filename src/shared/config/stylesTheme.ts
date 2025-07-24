@@ -4,8 +4,8 @@ export const lightTheme: DefaultTheme = {
   name: 'light',
   colors: {
     background: '#ffffff',
-    text: '#000000',
-    primary: '#1890ff',
+    primary: '#131118',
+    secondary: '#A4A1AA',
   },
 };
 
@@ -13,8 +13,8 @@ export const darkTheme: DefaultTheme = {
   name: 'dark',
   colors: {
     background: '#000000',
-    text: '#ffffff',
     primary: '#00b96b',
+    secondary: '#A4A1AA',
   },
 };
 

@@ -5,8 +5,8 @@ declare module 'styled-components' {
     name: 'light' | 'dark';
     colors: {
       background: string;
-      text: string;
       primary: string;
+      secondary: string;
     };
   }
 }

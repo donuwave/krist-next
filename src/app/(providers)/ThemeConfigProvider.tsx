@@ -4,8 +4,9 @@ import { ConfigProvider } from 'antd';
 import React, { FC, PropsWithChildren } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { useGlobalStore } from '@/entities/global';
 import { getAntdTheme, getStylesTheme } from '@/shared/config';
+
+import { useGlobalStore } from '../../entities/global-settings';
 
 export const ThemeConfigProvider: FC<PropsWithChildren> = ({ children }) => {
   const { theme } = useGlobalStore();

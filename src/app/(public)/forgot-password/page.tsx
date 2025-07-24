@@ -1,3 +1,10 @@
+import { StageProvider } from '@/entities/auth';
+import { ForgotPasswordPage } from '@/screens/forgot-password-page';
+
 export default function Page() {
-  return <div>ForgotPassword</div>;
+  return (
+    <StageProvider>
+      <ForgotPasswordPage />
+    </StageProvider>
+  );
 }
