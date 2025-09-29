@@ -1,18 +1,15 @@
 'use client';
 
-import { Input } from 'antd';
 import React from 'react';
-import { styled } from 'styled-components';
 
-export const SHome = styled.div`
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import { SHome } from './home.styles';
 
 export const Home = () => {
   return (
     <SHome>
-      <Input />
-      dddd
+      <div>fff</div>
+      <div>fff</div>
+      <div>fff</div>
     </SHome>
   );
 };

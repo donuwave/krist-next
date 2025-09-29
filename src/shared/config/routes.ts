@@ -3,4 +3,5 @@ export const ROUTES = {
   LOGIN: '/login',
   REGISTRATION: '/registration',
   FORGOT_PASSWORD: '/forgot-password',
+  PRODUCTS_LIST: '/product-list-page',
 };
