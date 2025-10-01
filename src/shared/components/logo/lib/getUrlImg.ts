@@ -6,8 +6,8 @@ interface GetUrlImgArgs {
 }
 
 export const getUrlImg = ({ theme, isInverted }: GetUrlImgArgs) => {
-  const darkImgUrl = './logo-light.jpg';
-  const lightImgUrl = './logo.png';
+  const darkImgUrl = '/logo-light.jpg';
+  const lightImgUrl = '/logo.png';
 
   if (isInverted) {
     return theme === 'dark' ? lightImgUrl : darkImgUrl;
