@@ -6,6 +6,8 @@ export const lightTheme: DefaultTheme = {
     background: '#ffffff',
     primary: '#131118',
     secondary: '#A4A1AA',
+    error: '#f63c3c',
+    additional: '#e4e4e4',
   },
 };
 
@@ -15,6 +17,8 @@ export const darkTheme: DefaultTheme = {
     background: '#000000',
     primary: '#00b96b',
     secondary: '#A4A1AA',
+    error: '#f63c3c',
+    additional: '#e4e4e4',
   },
 };
 

@@ -37,8 +37,8 @@ export const ProductPhotoChoice = () => {
       <SImg src={main.src} alt="пупу" />
       <SSmallPreview>
         {photos.map(({ src, id }) => (
-          <SPreview key={id} $isSelected={id === main.id}>
-            <img onClick={() => choicePhoto(id)} src={src} alt={src} />
+          <SPreview key={id} onClick={() => choicePhoto(id)} $isSelected={id === main.id}>
+            <img src={src} alt={src} />
           </SPreview>
         ))}
       </SSmallPreview>

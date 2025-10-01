@@ -11,8 +11,8 @@ export const SProfile = styled.div`
 `;
 
 export const SImg = styled.img`
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
 `;

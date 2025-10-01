@@ -48,7 +48,7 @@ export const ProductDetailsInformation = () => {
         </SColorList>
       </SColorPick>
       <SColorPick>
-        <SSubTitle>Sizw</SSubTitle>
+        <SSubTitle>Size</SSubTitle>
         <SColorList>
           {sizes.map((size) => (
             <SSize key={size}>{size}</SSize>
