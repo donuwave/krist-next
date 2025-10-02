@@ -31,7 +31,7 @@ export const Header = () => {
           open={isPopoverCart}
           trigger="click"
           onOpenChange={handleTogglePopover}
-          content={<CartPopover />}
+          content={<CartPopover onClose={handleTogglePopover} />}
         >
           <Button type="link" icon={<FontAwesomeIcon icon={faCartShopping} />} />
         </Popover>

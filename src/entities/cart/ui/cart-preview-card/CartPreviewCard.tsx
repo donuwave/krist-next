@@ -2,9 +2,9 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-import { SDelete, SImg, SInfo, SPrice, SProductCartPreview } from './productCartPreview.styles';
+import { SDelete, SImg, SInfo, SPrice, SProductCartPreview } from './cartPreviewCard.styles';
 
-export const ProductCartPreview = () => {
+export const CartPreviewCard = () => {
   return (
     <SProductCartPreview>
       <SImg src="/pac.jpg" />

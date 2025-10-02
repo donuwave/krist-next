@@ -1,19 +1,29 @@
 import { Button } from 'antd';
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import React, { FC } from 'react';
 
-import { ProductCartPreview } from '@/entities/product';
+import { CartPreviewCard } from '@/entities/cart';
+import { ROUTES } from '@/shared/config';
 
 import { SCartPopover, SList, SSubTotal } from './cartPopover.styles';
+import { CartPopoverType } from '../model/cartPopover.types';
 
 //TODO: корзина товарова
-export const CartPopover = () => {
+export const CartPopover: FC<CartPopoverType> = ({ onClose }) => {
+  const router = useRouter();
+
+  const handleCart = () => {
+    router.push(ROUTES.CART);
+    onClose();
+  };
+
   return (
     <SCartPopover>
       <div>You have 3 items in your cart</div>
       <SList>
-        <ProductCartPreview />
-        <ProductCartPreview />
-        <ProductCartPreview />
+        <CartPreviewCard />
+        <CartPreviewCard />
+        <CartPreviewCard />
       </SList>
 
       <SSubTotal>
@@ -21,9 +31,8 @@ export const CartPopover = () => {
         <span>$400.00</span>
       </SSubTotal>
 
-      <Button size="large">View Cart</Button>
-      <Button size="large" type="primary">
-        Checkout
+      <Button onClick={handleCart} size="large">
+        View Cart
       </Button>
     </SCartPopover>
   );
