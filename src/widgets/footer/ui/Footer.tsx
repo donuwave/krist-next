@@ -1,5 +1,7 @@
 'use client';
 
+import { faEnvelope, faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 import { Logo } from '@/shared/components';
@@ -10,6 +12,7 @@ import {
   SFooterContainer,
   SInfo,
   SInput,
+  SItem,
   SServices,
   STitle,
 } from './footer.styles';
@@ -20,9 +23,17 @@ export const Footer = () => {
       <SFooter>
         <SInfo>
           <Logo isInverted />
-          <div>704 5555-0127</div>
-          <div>krist@google.com</div>
-          <div>3891 Rancheiwe DR. Richaldson, California 62639</div>
+          <SItem>
+            <FontAwesomeIcon icon={faPhoneVolume} />
+            704 5555-0127
+          </SItem>
+          <SItem>
+            <FontAwesomeIcon icon={faEnvelope} /> krist@google.com
+          </SItem>
+          <SItem>
+            <FontAwesomeIcon icon={faLocationDot} />
+            3891 Rancheiwe DR. Richaldson, California 62639
+          </SItem>
         </SInfo>
         <SServices>
           <STitle>Information</STitle>
@@ -44,7 +55,7 @@ export const Footer = () => {
             Enter your email below to be the first to known about new collections and product
             launches
           </div>
-          <SInput placeholder="Your Email" />
+          <SInput size="large" placeholder="Your Email" />
         </SEmailField>
       </SFooter>
     </SFooterContainer>

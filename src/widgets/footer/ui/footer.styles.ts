@@ -19,6 +19,13 @@ export const SInfo = styled.div`
   display: grid;
   gap: 16px;
   max-width: 250px;
+  color: ${({ theme }) => theme.colors.background};
+`;
+
+export const SItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const SServices = styled.div`

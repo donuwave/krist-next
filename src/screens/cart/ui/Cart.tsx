@@ -1,9 +1,12 @@
 'use client';
 
-import { Button, Input } from 'antd';
+import { Button } from 'antd';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 import { CartCard } from '@/entities/cart';
+import { InputButton } from '@/shared/components';
+import { ROUTES } from '@/shared/config';
 
 import {
   SCart,
@@ -17,8 +20,13 @@ import {
   STotal,
 } from './cart.styles';
 
-//TODO: сделать компонент Input + Button
 export const Cart = () => {
+  const router = useRouter();
+
+  const handleCreateOrder = () => {
+    router.push(ROUTES.ORDER_DRAFT);
+  };
+
   return (
     <div>
       <STitle>Cart</STitle>
@@ -43,7 +51,7 @@ export const Cart = () => {
             <span>$200.00</span>
           </SSubtotalTitle>
           <SCharge>
-            <Input size="large" placeholder="Input discount code" />
+            <InputButton />
             <SDiscount>
               <span>Delivery Charge</span>
               <span>$5.00</span>
@@ -54,7 +62,7 @@ export const Cart = () => {
               <span>Grand Total</span>
               <span>$205.00</span>
             </SGrandTotal>
-            <Button size="large" type="primary">
+            <Button onClick={handleCreateOrder} size="large" type="primary">
               Proceed to checkout
             </Button>
           </STotal>
