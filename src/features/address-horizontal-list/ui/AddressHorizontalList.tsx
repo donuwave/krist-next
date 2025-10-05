@@ -3,7 +3,7 @@ import React from 'react';
 import { AddressChoiceCard } from '@/entities/address';
 
 import { SList, STitle } from './addressHorizontalList.styles';
-
+//TODO: вытащить заголовок из этого компонента
 export const AddressHorizontalList = () => {
   return (
     <div>

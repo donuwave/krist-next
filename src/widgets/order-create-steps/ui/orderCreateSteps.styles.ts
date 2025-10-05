@@ -10,7 +10,7 @@ export const STitleContainer = styled.div<StepItemProps>`
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-weight: ${({ $isActive }) => ($isActive ? 'bold' : 'normal')};
+  font-weight: 700;
 `;
 
 export const SIcon = styled.div<StepItemProps>`
@@ -29,7 +29,7 @@ export const SIcon = styled.div<StepItemProps>`
   }
 `;
 
-export const SAddress = styled.div`
+export const SStep = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -45,4 +45,15 @@ export const SSetStageButton = styled(Button)`
   &.ant-btn {
     width: 40%;
   }
+`;
+
+export const STitle = styled.h2`
+  font-weight: 700;
+  font-size: 18px;
+`;
+
+export const STitleOrderCreate = styled.h2`
+  font-size: 32px;
+  font-weight: 500;
+  padding: 28px 0;
 `;

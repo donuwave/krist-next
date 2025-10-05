@@ -3,10 +3,13 @@ import React, { useMemo, useState } from 'react';
 
 import { AddressAdd } from '@/features/address-add';
 import { AddressHorizontalList } from '@/features/address-horizontal-list';
+import { PaymentList } from '@/features/payment-list';
 import {
-  SAddress,
+  SStep,
   SList,
   SSetStageButton,
+  STitle,
+  STitleOrderCreate,
 } from '@/widgets/order-create-steps/ui/orderCreateSteps.styles';
 
 import { getCurrentItems, STEP_LABELS } from '../lib/getCurrentSteps';
@@ -53,12 +56,15 @@ export const OrderCreateSteps = () => {
     }
   };
 
+  //TODO: добавить форму для добавления payment method
+
   return (
     <div>
+      <STitleOrderCreate>Shipping Address</STitleOrderCreate>
       <Steps size="small" current={current} onChange={onChange} items={items} />
 
       {current === 0 && (
-        <SAddress>
+        <SStep>
           <SList>
             <AddressHorizontalList />
 
@@ -68,13 +74,18 @@ export const OrderCreateSteps = () => {
           </SList>
 
           <AddressAdd />
-        </SAddress>
+        </SStep>
       )}
 
       {current === 1 && (
-        <Button type="primary" onClick={handleNext}>
-          Далее: Review
-        </Button>
+        <SStep>
+          <STitle>Select a payment method</STitle>
+          <PaymentList />
+
+          <Button type="primary" onClick={handleNext}>
+            Далее: Review
+          </Button>
+        </SStep>
       )}
 
       {current === 2 && <div>Review summary — всё готово!</div>}

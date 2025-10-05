@@ -18,6 +18,7 @@ export const SSubtotal = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.additional};
   padding: 18px;
   height: max-content;
+  margin-top: 100px;
 `;
 
 export const SSubtotalTitle = styled.div`

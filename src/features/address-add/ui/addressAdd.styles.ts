@@ -12,8 +12,8 @@ export const SForm = styled.form`
 `;
 
 export const STitle = styled.h4`
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 18px;
 `;
 
 export const SSubmit = styled(Button)`
