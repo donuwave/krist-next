@@ -1,6 +1,14 @@
 import { Button, StepProps, Steps } from 'antd';
 import React, { useMemo, useState } from 'react';
 
+import { AddressAdd } from '@/features/address-add';
+import { AddressHorizontalList } from '@/features/address-horizontal-list';
+import {
+  SAddress,
+  SList,
+  SSetStageButton,
+} from '@/widgets/order-create-steps/ui/orderCreateSteps.styles';
+
 import { getCurrentItems, STEP_LABELS } from '../lib/getCurrentSteps';
 import { StepStatus } from '../model/orderCreateStepts.types';
 
@@ -50,9 +58,17 @@ export const OrderCreateSteps = () => {
       <Steps size="small" current={current} onChange={onChange} items={items} />
 
       {current === 0 && (
-        <Button type="primary" onClick={handleNext}>
-          Далее: Payment Method
-        </Button>
+        <SAddress>
+          <SList>
+            <AddressHorizontalList />
+
+            <SSetStageButton size="large" type="primary" onClick={handleNext}>
+              Deliver Here
+            </SSetStageButton>
+          </SList>
+
+          <AddressAdd />
+        </SAddress>
       )}
 
       {current === 1 && (

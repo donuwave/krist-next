@@ -7,7 +7,7 @@ export const lightTheme: DefaultTheme = {
     primary: '#131118',
     secondary: '#A4A1AA',
     error: '#f63c3c',
-    additional: '#e4e4e4',
+    additional: '#f6f6f6',
   },
 };
 

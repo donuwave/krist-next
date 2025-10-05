@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import { styled } from 'styled-components';
 
 interface StepItemProps {
@@ -25,5 +26,23 @@ export const SIcon = styled.div<StepItemProps>`
   svg {
     color: ${({ $isActive, theme }) =>
       $isActive ? theme.colors.background : theme.colors.primary};
+  }
+`;
+
+export const SAddress = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+`;
+
+export const SList = styled.div`
+  padding-bottom: 24px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.additional};
+`;
+
+export const SSetStageButton = styled(Button)`
+  &.ant-btn {
+    width: 40%;
   }
 `;

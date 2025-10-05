@@ -1,4 +1,4 @@
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faCreditCard, faFile, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -6,6 +6,7 @@ import { GetCurrentItemsProps } from '../model/orderCreateStepts.types';
 import { SIcon, STitleContainer } from '../ui/orderCreateSteps.styles';
 
 export const STEP_LABELS = ['Address', 'Payment Method', 'Review'];
+const STEP_ICONS = [faHouse, faCreditCard, faFile];
 
 export const getCurrentItems = ({ current, stepStatuses }: GetCurrentItemsProps) => {
   return stepStatuses.map((status, index) => {
@@ -16,7 +17,7 @@ export const getCurrentItems = ({ current, stepStatuses }: GetCurrentItemsProps)
       title: (
         <STitleContainer $isActive={isFinishedOrActive}>
           <SIcon $isActive={isFinishedOrActive}>
-            <FontAwesomeIcon size="2x" icon={faHouse} />
+            <FontAwesomeIcon size="2x" icon={STEP_ICONS[index]} />
           </SIcon>
           <div>{STEP_LABELS[index]}</div>
         </STitleContainer>
