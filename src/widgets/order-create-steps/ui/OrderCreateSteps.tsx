@@ -1,69 +1,79 @@
-import { Button, StepProps, Steps } from 'antd';
+import { StepProps, Steps } from 'antd';
 import React, { useMemo, useState } from 'react';
 
 import { AddressAdd } from '@/features/address-add';
 import { AddressHorizontalList } from '@/features/address-horizontal-list';
+import { PaymentAdd } from '@/features/payment-add';
 import { PaymentList } from '@/features/payment-list';
+import { useSteps } from '@/widgets/order-create-steps';
+import { OrderReview } from '@/widgets/order-review';
+
 import {
   SStep,
   SList,
   SSetStageButton,
   STitle,
   STitleOrderCreate,
-} from '@/widgets/order-create-steps/ui/orderCreateSteps.styles';
-
+  SSubmit,
+} from './orderCreateSteps.styles';
 import { getCurrentItems, STEP_LABELS } from '../lib/getCurrentSteps';
 import { StepStatus } from '../model/orderCreateStepts.types';
+//TODO: добавить кнопку для создания subtotal
+
+const FooterAddressAdd = (
+  <SSubmit type="primary" size="large" htmlType="submit">
+    Add New Address
+  </SSubmit>
+);
 
 export const OrderCreateSteps = () => {
-  const [current, setCurrent] = useState(0);
+  const { currentStep, setCurrentStep } = useSteps();
+
   const [stepStatuses, setStepStatuses] = useState<StepStatus[]>(['process', 'wait', 'wait']);
 
   const items: StepProps[] = useMemo(
-    () => getCurrentItems({ current, stepStatuses }),
-    [current, stepStatuses]
+    () => getCurrentItems({ currentStep, stepStatuses }),
+    [currentStep, stepStatuses]
   );
 
   const handleNext = () => {
     setStepStatuses((prev) => {
       const newStatuses = [...prev];
-      newStatuses[current] = 'finish';
-      if (current + 1 < newStatuses.length) {
-        newStatuses[current + 1] = 'process';
+      newStatuses[currentStep] = 'finish';
+      if (currentStep + 1 < newStatuses.length) {
+        newStatuses[currentStep + 1] = 'process';
       }
       return newStatuses;
     });
 
-    if (current + 1 < STEP_LABELS.length) {
-      setCurrent(current + 1);
+    if (currentStep + 1 < STEP_LABELS.length) {
+      setCurrentStep(currentStep + 1);
     }
   };
 
   const onChange = (targetIndex: number) => {
-    if (targetIndex === current) return;
+    if (targetIndex === currentStep) return;
 
-    if (targetIndex < current) {
-      setCurrent(targetIndex);
+    if (targetIndex < currentStep) {
+      setCurrentStep(targetIndex);
       return;
     }
 
-    if (targetIndex > current) {
+    if (targetIndex > currentStep) {
       const prevStepStatus = stepStatuses[targetIndex - 1];
 
       if (prevStepStatus === 'finish') {
-        setCurrent(targetIndex);
+        setCurrentStep(targetIndex);
       }
     }
   };
 
-  //TODO: добавить форму для добавления payment method
-
   return (
     <div>
       <STitleOrderCreate>Shipping Address</STitleOrderCreate>
-      <Steps size="small" current={current} onChange={onChange} items={items} />
+      <Steps size="small" current={currentStep} onChange={onChange} items={items} />
 
-      {current === 0 && (
+      {currentStep === 0 && (
         <SStep>
           <SList>
             <AddressHorizontalList />
@@ -73,22 +83,28 @@ export const OrderCreateSteps = () => {
             </SSetStageButton>
           </SList>
 
-          <AddressAdd />
+          <AddressAdd footer={FooterAddressAdd} />
         </SStep>
       )}
 
-      {current === 1 && (
+      {currentStep === 1 && (
         <SStep>
           <STitle>Select a payment method</STitle>
           <PaymentList />
 
-          <Button type="primary" onClick={handleNext}>
-            Далее: Review
-          </Button>
+          <SSetStageButton size="large" type="primary" onClick={handleNext}>
+            Continue
+          </SSetStageButton>
+
+          <PaymentAdd />
         </SStep>
       )}
 
-      {current === 2 && <div>Review summary — всё готово!</div>}
+      {currentStep === 2 && (
+        <SStep>
+          <OrderReview />
+        </SStep>
+      )}
     </div>
   );
 };

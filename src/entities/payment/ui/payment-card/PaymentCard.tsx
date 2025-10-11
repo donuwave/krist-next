@@ -20,9 +20,7 @@ export const PaymentCard = () => {
         <span>3056 0233 1223 2442</span>
       </SInfo>
       <SActions>
-        <Checkbox checked={checked} value={handleSetChecked}>
-          Choice
-        </Checkbox>
+        <Checkbox checked={checked}>Choice</Checkbox>
         <Button size="middle">Delete</Button>
       </SActions>
     </SPaymentCard>

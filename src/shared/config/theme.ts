@@ -15,6 +15,10 @@ export const getAntdTheme = (theme: DefaultTheme) => {
         colorLinkHover: theme.colors.secondary,
         controlHeightLG: 50,
       },
+      Menu: {
+        itemSelectedBg: theme.colors.primary,
+        itemSelectedColor: theme.colors.background,
+      },
     },
   };
 };

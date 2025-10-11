@@ -18,9 +18,9 @@ import {
   STitle,
   STitleCart,
   STotal,
-} from './cart.styles';
+} from './cartPage.styles';
 
-export const Cart = () => {
+export const CartPage = () => {
   const router = useRouter();
 
   const handleCreateOrder = () => {

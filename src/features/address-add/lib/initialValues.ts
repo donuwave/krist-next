@@ -1,6 +1,6 @@
-import { IAddressAddProps } from '../model/addressAdd.types';
+import { IAddressAdd } from '@/entities/address';
 
-export const initialValues: IAddressAddProps = {
+export const initialValues: IAddressAdd = {
   name: '',
   mobile: '',
   address: '',

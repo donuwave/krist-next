@@ -1,14 +1,13 @@
 import { Button, ModalProps } from 'antd';
 import React, { FC } from 'react';
 
+import { SuccessLogo } from '@/shared/components/success-logo';
+
 import {
   SDescription,
-  SInner,
   SModal,
   SModalContent,
   SModalFooter,
-  SOther,
-  SSmall,
   STitle,
 } from './forgotPasswordModal.styles';
 
@@ -36,13 +35,7 @@ export const ForgotPasswordModal: FC<ForgotPasswordModalProps> = ({
       onCancel={onCancel}
     >
       <SModalContent>
-        <SOther>
-          <SInner>
-            <SSmall>
-              <img src="./current.png" />
-            </SSmall>
-          </SInner>
-        </SOther>
+        <SuccessLogo />
 
         <STitle>Password Changed Successfully</STitle>
         <SDescription>Your password has been updated successfully</SDescription>

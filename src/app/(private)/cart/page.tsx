@@ -1,5 +1,5 @@
-import { Cart } from '@/screens/cart';
+import { CartPage } from '@/screens/cart-page';
 
 export default async function Page() {
-  return <Cart />;
+  return <CartPage />;
 }

@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import { SHome } from './home.styles';
+import { SHome } from './homePage.styles';
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <SHome>
       <div>fff</div>

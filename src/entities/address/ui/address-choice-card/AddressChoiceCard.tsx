@@ -24,7 +24,7 @@ export const AddressChoiceCard = () => {
     <SCard onClick={handleChangeChecked} $checked={checked}>
       <SUp>
         <STitle>Robert Fox</STitle>
-        <Checkbox checked={checked} onChange={handleChangeChecked} />
+        <Checkbox checked={checked} />
       </SUp>
       <div>4517 Washington Ave. Manchester, Kentucky 39423</div>
       <SActions>

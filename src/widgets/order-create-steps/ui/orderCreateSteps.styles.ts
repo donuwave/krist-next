@@ -57,3 +57,10 @@ export const STitleOrderCreate = styled.h2`
   font-weight: 500;
   padding: 28px 0;
 `;
+
+export const SSubmit = styled(Button)`
+  &.ant-btn {
+    justify-self: start;
+    width: 40%;
+  }
+`;

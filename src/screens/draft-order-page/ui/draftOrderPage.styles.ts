@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import { styled } from 'styled-components';
 
 export const SDraftOrderPage = styled.div`
@@ -19,6 +20,7 @@ export const SSubtotal = styled.div`
   padding: 18px;
   height: max-content;
   margin-top: 100px;
+  display: grid;
 `;
 
 export const SSubtotalTitle = styled.div`
@@ -50,4 +52,10 @@ export const SGrandTotal = styled.div`
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
+`;
+
+export const SSubmit = styled(Button)`
+  &.ant-btn {
+    margin-top: 18px;
+  }
 `;

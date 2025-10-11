@@ -8,9 +8,9 @@ import { SIcon, STitleContainer } from '../ui/orderCreateSteps.styles';
 export const STEP_LABELS = ['Address', 'Payment Method', 'Review'];
 const STEP_ICONS = [faHouse, faCreditCard, faFile];
 
-export const getCurrentItems = ({ current, stepStatuses }: GetCurrentItemsProps) => {
+export const getCurrentItems = ({ currentStep, stepStatuses }: GetCurrentItemsProps) => {
   return stepStatuses.map((status, index) => {
-    const isActive = index === current;
+    const isActive = index === currentStep;
     const isFinishedOrActive = status === 'finish' || isActive;
 
     return {
