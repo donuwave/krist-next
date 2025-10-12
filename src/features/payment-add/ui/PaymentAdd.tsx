@@ -1,14 +1,10 @@
 import { Form, Input } from 'antd';
+import { FC } from 'react';
 
-import {
-  SButton,
-  SFullField,
-  SPaymentAdd,
-  SPaymentAddContainer,
-  STitle,
-} from './paymentAdd.styles';
+import { SFullField, SPaymentAdd, SPaymentAddContainer, STitle } from './paymentAdd.styles';
+import { PaymentAddProps } from '../model/paymenAdd.types';
 
-export const PaymentAdd = () => {
+export const PaymentAdd: FC<PaymentAddProps> = ({ footer }) => {
   return (
     <SPaymentAddContainer>
       <STitle>Add a new payment method</STitle>
@@ -27,9 +23,7 @@ export const PaymentAdd = () => {
           <Input size="large" placeholder="Enter cvv code" />
         </Form.Item>
       </SPaymentAdd>
-      <SButton type="primary" size="large">
-        Add Card
-      </SButton>
+      {footer}
     </SPaymentAddContainer>
   );
 };

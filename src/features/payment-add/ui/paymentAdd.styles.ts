@@ -1,10 +1,7 @@
 import { Button, Form } from 'antd';
 import { styled } from 'styled-components';
 
-export const SPaymentAddContainer = styled.form`
-  border-top: 1px solid ${({ theme }) => theme.colors.additional};
-  padding-top: 24px;
-`;
+export const SPaymentAddContainer = styled.form``;
 
 export const STitle = styled.h4`
   font-weight: 700;
@@ -16,6 +13,7 @@ export const SPaymentAdd = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  padding-bottom: 24px;
 `;
 
 export const SFullField = styled(Form.Item)`

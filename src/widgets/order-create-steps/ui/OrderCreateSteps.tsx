@@ -15,6 +15,8 @@ import {
   STitle,
   STitleOrderCreate,
   SSubmit,
+  SContainerPayment,
+  SButton,
 } from './orderCreateSteps.styles';
 import { getCurrentItems, STEP_LABELS } from '../lib/getCurrentSteps';
 import { StepStatus } from '../model/orderCreateStepts.types';
@@ -96,7 +98,15 @@ export const OrderCreateSteps = () => {
             Continue
           </SSetStageButton>
 
-          <PaymentAdd />
+          <SContainerPayment>
+            <PaymentAdd
+              footer={
+                <SButton type="primary" size="large">
+                  Add Card
+                </SButton>
+              }
+            />
+          </SContainerPayment>
         </SStep>
       )}
 

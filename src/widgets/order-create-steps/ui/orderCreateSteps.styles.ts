@@ -47,6 +47,11 @@ export const SSetStageButton = styled(Button)`
   }
 `;
 
+export const SContainerPayment = styled.div`
+  border-top: 1px solid ${({ theme }) => theme.colors.additional};
+  padding-top: 18px;
+`;
+
 export const STitle = styled.h2`
   font-weight: 700;
   font-size: 18px;
@@ -62,5 +67,12 @@ export const SSubmit = styled(Button)`
   &.ant-btn {
     justify-self: start;
     width: 40%;
+  }
+`;
+
+export const SButton = styled(Button)`
+  &.ant-btn {
+    margin-top: 16px;
+    min-width: 40%;
   }
 `;
