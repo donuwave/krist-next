@@ -1,3 +1,5 @@
+import { OrderPage } from '@/screens/order-page';
+
 export default async function Page() {
-  return <div>order</div>;
+  return <OrderPage />;
 }
