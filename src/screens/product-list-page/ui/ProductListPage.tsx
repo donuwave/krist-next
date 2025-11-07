@@ -13,28 +13,27 @@ import { SProductListPage } from './productListPage.styles';
 
 export const ProductListPage = () => {
   //TODO: Подумать над перееносом Breadcrumb в лаяут или в глобальную функцию
+  const items = [
+    {
+      title: (
+        <Link style={{ color: 'black' }} href={ROUTES.HOME}>
+          Home
+        </Link>
+      ),
+    },
+    {
+      title: (
+        <Link style={{ color: 'black' }} href={ROUTES.PRODUCTS_LIST}>
+          All products
+        </Link>
+      ),
+    },
+  ];
 
   return (
     <>
       <div style={{ paddingLeft: 16, paddingTop: 48 }}>
-        <Breadcrumb
-          items={[
-            {
-              title: (
-                <Link style={{ color: 'black' }} href={ROUTES.HOME}>
-                  Home
-                </Link>
-              ),
-            },
-            {
-              title: (
-                <Link style={{ color: 'black' }} href={ROUTES.PRODUCTS_LIST}>
-                  All products
-                </Link>
-              ),
-            },
-          ]}
-        />
+        <Breadcrumb items={items} />
       </div>
 
       <SProductListPage>
