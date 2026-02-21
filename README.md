@@ -20,3 +20,7 @@
 Зашёл в панель управления DNS регистратора (предположительно, Reg.ru).
 Изменил (или создал) A-записи для @ и www, указав в них IP своего сервера 147.45.185.125.
 Дождался обновления DNS — проверил через nslookup, что домен теперь резолвится в нужный IP.
+
+
+host - https://server112.hosting.reg.ru:1500/ispmgr#/list?elid=tareev.space&elname=tareev.space&p_num=1&tab_parent_id=1&func=domain.record&tab_id=6
+аренда - https://timeweb.cloud/my/servers/6714805
