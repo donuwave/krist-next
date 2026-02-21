@@ -3,7 +3,7 @@
 import { Form, Input } from 'antd';
 import React from 'react';
 
-import { SButton, SForm, SFull, SHeader, SImg, SProfileEditForm } from './profileEditForm.styles';
+import { SForm, SFull, SProfileEditForm } from './profileEditForm.styles';
 
 export const ProfileEditForm = () => {
   return (

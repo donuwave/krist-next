@@ -1,6 +1,6 @@
 import { object, ObjectSchema, string } from 'yup';
 
-import { IAddressAdd } from '../model/addressAdd.types';
+import { IAddressAdd } from '@/entities/address';
 
 export const validationSchema: ObjectSchema<IAddressAdd> = object({
   name: string().required('Обязательное поле'),

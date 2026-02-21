@@ -5,6 +5,7 @@ import { GridList, GridListProps } from '@/shared/components';
 
 export const ProductList = () => {
   //TODO: исправить использование _
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const itemContent: GridListProps<{ key: number }>['itemContent'] = (_, el) => {
     return <ProductCard />;
   };
